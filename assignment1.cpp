@@ -112,7 +112,100 @@ void DrawStars(int n)
 
 void DrawNorthAmerica()
 {
-    glColor3f(0.0, 1.0, 0.0);
+    glColor3f(0.215, 0.572, 0.215);
+    glBegin(GL_POLYGON);
+
+    glVertex2i(330, 220);
+    glVertex2i(310, 195);
+    glVertex2i(300, 160);
+    glVertex2i(315, 140);
+    glVertex2i(320, 120);
+    glVertex2i(340, 135);
+    glVertex2i(350, 140);
+    glVertex2i(365, 160);
+    glVertex2i(370, 195);
+    glVertex2i(360, 215);
+
+    glEnd();
+}
+
+void DrawSouthAfrica()
+{
+    glColor3f(0.415, 0.572, 0.215);
+    glBegin(GL_POLYGON);
+
+    glVertex2i(380, 180);
+    glVertex2i(420, 165);
+    glVertex2i(430, 140);
+    glVertex2i(415, 125);
+    glVertex2i(425, 115);
+    glVertex2i(400, 85);
+    glVertex2i(390, 95);
+    glVertex2i(385, 110);
+    glVertex2i(370, 160);
+
+    glEnd();
+}
+
+void DrawAsiaEurope()
+{
+    glColor3f(0.215, 0.672, 0.215);
+    glBegin(GL_POLYGON);
+
+    glVertex2i(445, 190);
+    glVertex2i(480, 190);
+    glVertex2i(490, 180);
+    glVertex2i(480, 170);
+    // glColor3f(1.0, 0.0, 0.0);
+    glVertex2i(495, 160);
+    glVertex2i(485, 150);
+    glVertex2i(470, 130);
+    glVertex2i(460, 125);
+    glVertex2i(465, 135);
+    glVertex2i(470, 145);
+    glVertex2i(450, 150);
+    glVertex2i(440, 170);
+
+
+    glEnd();
+}
+
+void DrawNorthPole()
+{
+    glColor3f(0.737, 0.807, 0.964);
+    glBegin(GL_POLYGON);
+
+    glVertex2i(370, 245);
+    glVertex2i(380, 247);
+    glVertex2i(390, 249);
+    glVertex2i(400, 250);
+    glVertex2i(430, 245);
+    glVertex2i(450, 235);
+    glVertex2i(420, 230);
+    glVertex2i(410, 240);
+    glVertex2i(390, 235);
+    glVertex2i(370, 240);
+    glVertex2i(350, 235);
+   
+
+    glEnd();
+}
+
+void DrawSouthPole()
+{
+    glColor3f(0.737, 0.807, 0.964);
+    glBegin(GL_POLYGON);
+
+    glVertex2i(360, 60);
+    glVertex2i(370, 55);
+    glVertex2i(390, 52);
+    glVertex2i(400, 50);
+    glVertex2i(410, 53);
+    glVertex2i(425, 56);
+    glVertex2i(430, 58);
+    glVertex2i(435, 60);
+
+    glEnd();
 }
 
 void renderFrame()
@@ -121,7 +214,14 @@ void renderFrame()
 	glPointSize(1.0);
 
     DrawStars(500);
+
     DrawEarth();
+    DrawNorthAmerica();
+    DrawSouthAfrica();
+    DrawAsiaEurope();
+    DrawNorthPole();
+    DrawSouthPole();
+
     DrawAsteroid();
 
 	glFlush ();
